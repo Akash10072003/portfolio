@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Body and page styling */
+body {
+    font-family: Arial, sans-serif;
+    height: 300vh; /* Set height for scrollable content */
+    overflow-y: scroll;
+   
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #262525;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+.section {
+    height: 100vh;
+    padding-top: 0rem;
+    display: flex;
+    font-size: 2rem;
+    transition: margin-top 0.5s ease;
+    padding-left: 0;
+    
+}
+
+
+
+#home , #about, #projects{
+    background-color: #262525;
+    
+}
+
+/* Fading effect using :target pseudo-class */
+#home:target ~ .navbar,
+#about:target ~ .navbar,
+#projects:target ~ .navbar {
+    opacity: 0;
+}
+
+
+ .left{
+    
+    display: flex;
+    background-color: #262525;
+    width: 70%;
+    padding-left: 3rem;
+    
+   
+
+    
+}
+.right{
+    background: linear-gradient(-45deg, #3877FF,#262525 70%);
+    width: 30%;
+   
+    display: flex;
+    justify-content: flex-end;
+   
+
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+
+.right .design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+ }
+
+ .circle:nth-child(1){
+    background: linear-gradient(90deg,transparent 50%,#262525 50%);
+    width: 30rem;
+}
+.circle:nth-child(2){
+    background-image: url("image/WhatsApp\ Image\ 2024-10-26\ at\ 9.28.55\ AM.jpg"); 
+    width: 26rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: .3rem solid white;
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3877FF,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem #3877FF;
+
+}
+.icons .fa-brands:hover{
+    cursor: pointer;
+    color:#5db9ee;
+    background: linear-gradient(#fff, #5db9ee);
+    -webkit-background-clip: text;
+    background-clip:text;
+
+    -webkit-text-fill-color: transparent;
+}
+  
+.icons .fa-brands:nth-child(1):hover{
+/* background: #5db9ee; */
+transform: scale(1.1);
+box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+transition: .5s ease;
+
+}
+.icons .fa-brands:nth-child(2):hover{
+/* background: #5db9ee; */
+transform: scale(1.1);
+box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+transition: .5s ease;
+}
+.icons .fa-brands:nth-child(3):hover{
+/* background: #5db9ee; */
+transform: scale(1.1);
+box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+transition: .5s ease;
+}
+
+.content{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 150px;
+}
+.content .intro{
+    font-size: 1.5rem;
+    color: white;
+    
+}
+.content .intro span{
+    color: #5db9ee;
+}
+
+.content h1{
+    font-size: 3rem;
+    color: #5db9ee;
+}
+#element{
+    display: inline;
+    color: #5db9ee;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: .01px;
+    height: 1.5rem;
+}
+.content .detail{
+    display: block;
+    font-size: 1.1rem;
+   color: white;
+   height: fit-content;
+   max-width: 38rem; 
+   padding-top: 1rem;
+   margin-top: 1.5rem;
+   margin-bottom: 3rem;
+   line-height: 1.8rem;
+}
+.bton button{
+    border: .1rem solid #5db9ee;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+
+}
+button:nth-child(1){
+    background: transparent;
+    color: #5db9ee;
+}
+button:nth-child(2){
+    background: transparent;
+    color: #5db9ee;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    /* background: transparent; */
+    /* color: #5db9ee; */
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+}
+button:nth-child(2):hover{
+    /* background: #5db9ee; */
+    /* color: black; */
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Add padding */
+    display: block; /* Make the link fill the li */
+    position: relative; /* Needed for the pseudo-element */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    height: 2px; /* Height of the underline */
+    width: 0; /* Initial width is 0 */
+    background-color: white; /* Color of the underline */
+    transition: width 0.3s; /* Smooth transition for width */
+    position: absolute; /* Positioning relative to the link */
+    left: 50%; /* Center it horizontally */
+    bottom: -5px; /* Position it below the link */
+    transform: translateX(-50%); /* Center it by translating */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+.box{
+    height: 1px;
+}
+
+
+/* home page ends */
+
+
+
+.section, #about{
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.me{
+    
+    margin-left: 3rem;
+    margin-top: 5rem;
+    color:#5db9ee;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.me1{
+    font-size: 1.5rem;
+    margin: 10px 45px;
+    color: white;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    position: relative; /* Establishes a positioning context */
+}
+/* .journey{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+.line-structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position it absolutely within the container */
+    bottom: -350px; /* Adjust this value to position it below me1 */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
+.main-line {
+    width: 1000px; /* Length of the horizontal line */
+    height: 2px;
+    background-color: white;
+    position: relative;
+    padding-top: 0%;
+    justify-content: space-between;
+}
+
+.line-container {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Position below the main horizontal line */
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Downward lines */
+.line1{
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line2{
+    width: 2px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line3 {
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.line4 {
+    width: 2px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.line5{
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text under each line */
+.text1 {
+    font-size: 14px;
+    max-height: fit-content;
+    max-width: fit-content;
+    text-align: center;
+    color: white;
+    position: absolute; /* Position text absolutely */
+    bottom: -70px; /* Adjust this value to position below the line */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%) ; /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    
+    cursor: pointer;
+    
+}
+.text1:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+.text2:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+.text3:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+.text4:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+.text5:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+.text2 {
+    font-size: 14px;
+    max-height: fit-content;
+    max-width: fit-content;
+    text-align: center;
+    color: white;
+    position: absolute; /* Position text absolutely */
+    bottom: -70px; /* Adjust this value to position below the line */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.text3{
+    font-size: 14px;
+    max-height: fit-content;
+    max-width: fit-content;
+    text-align: center;
+    color: white;
+    position: absolute; /* Position text absolutely */
+    bottom: -105px; /* Adjust this value to position below the line */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.text4 {
+    font-size: 14px;
+    max-height: fit-content;
+    max-width: fit-content;
+    text-align: center;
+    color: white;
+    position: absolute; /* Position text absolutely */
+    bottom: -155px; /* Adjust this value to position below the line */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.text5{
+    font-size: 14px;
+    max-height: fit-content;
+    max-width: fit-content;
+    text-align: center;
+    color: white;
+    position: absolute; /* Position text absolutely */
+    bottom: -90px; /* Adjust this value to position below the line */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+/* about section ends here */
+
+
+#projects {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Set height to full viewport */
+    background-color: #262525; /* Optional: match your theme */
+}
+
+.container3 {
+    text-align: center; /* Center text within the container */
+    margin-top: 0px; /* Space above the title */
+}
+
+.project {
+    display: flex; /* Use flexbox for circles */
+    justify-content: center; /* Center circles horizontally */
+    align-items: center; /* Center circles vertically */
+    margin-top: 20px; /* Space between title and circles */
+    gap: 150px;
+}
+
+.project-circle {
+    width: 400px; /* Set circle size */
+    height: 400px; /* Set circle size */
+    border-radius: 50%; /* Make it circular */
+    
+    margin: 0 20px; /* Space between circles */
+    
+
+}
+.project-circle:nth-child(1){
+    background-image: url(image/depositphotos_355287548-stock-illustration-web-development-application-design-coding.jpg);
+    background-size: 100%;
+    border: .3rem solid white;
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3877FF,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem #3877FF;
+    
+}
+.project-circle:nth-child(2){
+    background-image: url(image/data-science.jpg);
+    background-size: 100%;
+    border: .3rem solid white;
+    box-shadow: 0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3877FF,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem #3877FF;
+}
+
+.project-text-container {
+    display: flex; /* Use flexbox for the text containers */
+    justify-content: space-around; /* Center text containers */
+    margin-top: 20px; /* Space above the text */
+    /* gap: 40px; */
+}
+
+.project-text {
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    margin: 0 20px; /* Space between the two text elements */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-top: 20px;
+}
+.project-text:hover{
+     cursor: pointer;
+    color:#5db9ee;
+    background: linear-gradient(#fff, #5db9ee);
+    -webkit-background-clip: text;
+    background-clip:text;
+
+    -webkit-text-fill-color: transparent;
+}
+.project-text:nth-child(1){
+    margin-left: -100px;
+    
+}
+.project-text:nth-child(2){
+    margin-right: -20px;
+
+}
+
+
+.purple{
+    color: blueviolet;
+}
+
